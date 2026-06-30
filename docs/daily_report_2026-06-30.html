@@ -25,6 +25,24 @@
     .summary-block h3 { margin: 0 0 6px; font-size: 14px; color: #0f766e; }
     .summary-block ul { margin: 0; padding-left: 20px; line-height: 1.65; font-size: 13px; }
     .summary-block li { margin-bottom: 5px; }
+    .launch-block { margin-top: 16px; padding-top: 14px; border-top: 1px solid #e6edf0; }
+    .launch-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; margin-bottom: 10px; }
+    .launch-head h2 { margin: 0; color: #0f766e; }
+    .launch-head span { color: #64748b; font-size: 12px; }
+    .launch-grid { display: grid; gap: 10px; }
+    .launch-card { display: grid; grid-template-columns: 44px minmax(0, 1fr) 92px; gap: 10px; align-items: center; padding: 10px; border: 1px solid #e4ebef; border-radius: 8px; background: #fbfdfe; }
+    .launch-icon { width: 44px; height: 44px; border-radius: 10px; object-fit: cover; background: #edf2f4; }
+    .launch-main { min-width: 0; }
+    .launch-main b { display: block; font-size: 14px; line-height: 1.25; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .launch-main p { margin: 4px 0; color: #64748b; font-size: 12px; line-height: 1.35; }
+    .launch-main span { display: block; color: #334155; font-size: 12px; line-height: 1.35; overflow-wrap: anywhere; }
+    .launch-strength { text-align: right; border-radius: 8px; padding: 7px 8px; background: #f1f5f9; }
+    .launch-strength strong { display: block; font-size: 12px; }
+    .launch-strength em { display: block; margin-top: 3px; color: #64748b; font-size: 11px; font-style: normal; }
+    .launch-strength.high { background: #fee2e2; color: #b91c1c; }
+    .launch-strength.mid { background: #ffedd5; color: #9a3412; }
+    .launch-strength.light { background: #e0f2fe; color: #0369a1; }
+    .launch-strength.low { background: #f1f5f9; color: #475569; }
     .focus-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
     .focus-card { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 8px; border: 1px solid #e4ebef; border-radius: 8px; background: #fbfdfe; padding: 10px; min-height: 108px; overflow: hidden; }
     .focus-card > div { min-width: 0; }
@@ -70,7 +88,7 @@
     .change.streak { background: #ffedd5; color: #9a3412; }
     .change.unknown { background: #f1f5f9; color: #64748b; }
     .note { color: #61717a; font-size: 12px; line-height: 1.65; }
-    @media (max-width: 1000px) { header, .top-grid, .three-grid, .source-grid, .mini-grid, .focus-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 1000px) { header, .top-grid, .three-grid, .source-grid, .mini-grid, .focus-grid { grid-template-columns: 1fr; } .launch-card { grid-template-columns: 44px minmax(0, 1fr); } .launch-strength { grid-column: 1 / -1; text-align: left; } }
   </style>
 </head>
 <body>
@@ -106,6 +124,41 @@
               <ul><li>리니지M | NC Corp. | ⚠️ 竞品预警 | 韩国 App Store 畅销 #9；韩国本土 MMORPG 长线付费标杆，目标用户与魔兽like MMORPG 高重叠，需要持续拆版本节点和付费活动。</li><li>오딘: 발할라 라이징 | Kakao Games Corp. | ⚠️ 竞品预警 🏭 大厂新品 | 韩国 App Store 畅销 #18；韩国 MMORPG/开放世界付费盘代表，若持续 Top5，应作为上线首周爬榜与长线留存对照。</li><li>마비노기 모바일 | NEXON Company | ⚠️ 竞品预警 🏭 大厂新品 | 韩国 App Store 畅销 #7；NEXON 本土 RPG/MMO 用户池强，适合观察社区反馈和首月内容节奏。</li><li>SOL: enchant | Netmarble Corporation | ⚠️ 竞品预警 🏭 大厂新品 | 韩国 App Store 畅销 #19；Netmarble 新品 RPG/MMO 收入承接强，和我司核心用户存在重叠，需要优先拆商店素材与活动包。</li><li><strong>메이플 키우기</strong> | NEXON Company | ⚠️ 竞品预警 🏭 大厂新品 | 韩国 App Store 畅销 #2；NEXON 放置 RPG/经典 IP，虽不是同玩法但共享韩国 RPG 付费用户，需看长期留存。</li></ul>
             </div>
             
+        
+      <div class="launch-block">
+        <div class="launch-head">
+          <h2>明日上线新产品｜2026-07-01</h2>
+          <span>按预约上架日期筛选；投放强度基于全部创意数分档</span>
+        </div>
+        <div class="launch-grid">
+            <article class="launch-card">
+              <img class="launch-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgdmlld0JveD0iMCAwIDk2IDk2Ij48cmVjdCB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHJ4PSIyMiIgZmlsbD0iIzQ3NTU2OSIvPjxjaXJjbGUgY3g9IjY2IiBjeT0iMjgiIHI9IjEyIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4yOCkiLz48cGF0aCBkPSJNMjQgNjZjMTAtMTggMjItMjcgMzYtMjcgOCAwIDE1IDMgMjEgOXYyOEgyNHoiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjM2KSIvPjx0ZXh0IHg9IjQ4IiB5PSI1NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ3aGl0ZSI+PzwvdGV4dD48L3N2Zz4=" alt="">
+              <div class="launch-main">
+                <b>Star Sailors</b>
+                <p>Com2uS Holdings · 角色扮演 · 预约转上线</p>
+                <span>MEX / EGY / COL / TWN / ISR / BHR / THA / ARG / IND / PHL</span>
+              </div>
+              <div class="launch-strength high">
+                <strong>强投放</strong>
+                <em>240 creatives</em>
+              </div>
+            </article>
+            
+            <article class="launch-card">
+              <img class="launch-icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgdmlld0JveD0iMCAwIDk2IDk2Ij48cmVjdCB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHJ4PSIyMiIgZmlsbD0iIzdjM2FlZCIvPjxjaXJjbGUgY3g9IjY2IiBjeT0iMjgiIHI9IjEyIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4yOCkiLz48cGF0aCBkPSJNMjQgNjZjMTAtMTggMjItMjcgMzYtMjcgOCAwIDE1IDMgMjEgOXYyOEgyNHoiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjM2KSIvPjx0ZXh0IHg9IjQ4IiB5PSI1NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ3aGl0ZSI+PzwvdGV4dD48L3N2Zz4=" alt="">
+              <div class="launch-main">
+                <b>뽑만추 : 방치된 뽑기기계 RPG</b>
+                <p>(주)딜리셔스게임즈 · 角色扮演 · 预约转上线</p>
+                <span>TWN / JPN</span>
+              </div>
+              <div class="launch-strength low">
+                <strong>低投放</strong>
+                <em>3 creatives</em>
+              </div>
+            </article>
+            </div>
+      </div>
+    
       </section>
       <section class="panel">
         <h2>今日新品 / 新热度产品</h2>
@@ -1581,4 +1634,4 @@
 </body>
 </html>
 
-<!-- inlined report assets: success=81 failed=0 -->
+<!-- inlined report assets: success=83 failed=2 -->
